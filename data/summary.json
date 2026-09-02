@@ -125,6 +125,31 @@
         "total": -3447580
       },
       "history_days": 1
+    },
+    {
+      "code": "6182",
+      "name": "合晶",
+      "market": "TPEX",
+      "latest_date": "20260902",
+      "latest": {
+        "foreign": -8336718,
+        "trust": -8336718,
+        "dealer": 0,
+        "total": -8911034
+      },
+      "last_7_days": {
+        "foreign": -8336718,
+        "trust": -8336718,
+        "dealer": 0,
+        "total": -8911034
+      },
+      "last_30_days": {
+        "foreign": -8336718,
+        "trust": -8336718,
+        "dealer": 0,
+        "total": -8911034
+      },
+      "history_days": 1
     }
   ]
 }
