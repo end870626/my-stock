@@ -1,7 +1,11 @@
 {
   "_說明": "在這裡編輯你的台股持股清單。market 請填 TWSE（上市）或 TPEx（上櫃）。不確定市場別的話，可以先亂填一個，程式跑起來後如果抓不到資料，改成另一個試試即可。",
   "holdings": [
-    { "code": "2330", "name": "台積電", "market": "TWSE" },
-    { "code": "2317", "name": "鴻海", "market": "TWSE" }
+    { "code": "3017", "name": "奇鋐", "market": "TWSE" },
+    { "code": "2360", "name": "致茂", "market": "TWSE" },
+    { "code": "3711", "name": "日月光投控", "market": "TWSE" },
+    { "code": "2049", "name": "上銀", "market": "TWSE" },
+    { "code": "6182", "name": "合晶", "market": "TPEx" },
+    { "code": "3715", "name": "定穎投控", "market": "TWSE" }
   ]
 }
