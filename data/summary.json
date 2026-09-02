@@ -1,4 +1,130 @@
 {
-  "updated_at": null,
-  "stocks": []
+  "updated_at": "20260902",
+  "stocks": [
+    {
+      "code": "3017",
+      "name": "奇鋐",
+      "market": "TWSE",
+      "latest_date": "20260902",
+      "latest": {
+        "foreign": 296188,
+        "trust": -242676,
+        "dealer": -52596,
+        "total": 916
+      },
+      "last_7_days": {
+        "foreign": 296188,
+        "trust": -242676,
+        "dealer": -52596,
+        "total": 916
+      },
+      "last_30_days": {
+        "foreign": 296188,
+        "trust": -242676,
+        "dealer": -52596,
+        "total": 916
+      },
+      "history_days": 1
+    },
+    {
+      "code": "2360",
+      "name": "致茂",
+      "market": "TWSE",
+      "latest_date": "20260902",
+      "latest": {
+        "foreign": -167772,
+        "trust": -74294,
+        "dealer": -5407,
+        "total": -247473
+      },
+      "last_7_days": {
+        "foreign": -167772,
+        "trust": -74294,
+        "dealer": -5407,
+        "total": -247473
+      },
+      "last_30_days": {
+        "foreign": -167772,
+        "trust": -74294,
+        "dealer": -5407,
+        "total": -247473
+      },
+      "history_days": 1
+    },
+    {
+      "code": "3711",
+      "name": "日月光投控",
+      "market": "TWSE",
+      "latest_date": "20260902",
+      "latest": {
+        "foreign": -2341638,
+        "trust": -4348839,
+        "dealer": -145222,
+        "total": -6835699
+      },
+      "last_7_days": {
+        "foreign": -2341638,
+        "trust": -4348839,
+        "dealer": -145222,
+        "total": -6835699
+      },
+      "last_30_days": {
+        "foreign": -2341638,
+        "trust": -4348839,
+        "dealer": -145222,
+        "total": -6835699
+      },
+      "history_days": 1
+    },
+    {
+      "code": "2049",
+      "name": "上銀",
+      "market": "TWSE",
+      "latest_date": "20260902",
+      "latest": {
+        "foreign": -120695,
+        "trust": -888000,
+        "dealer": -41278,
+        "total": -1049973
+      },
+      "last_7_days": {
+        "foreign": -120695,
+        "trust": -888000,
+        "dealer": -41278,
+        "total": -1049973
+      },
+      "last_30_days": {
+        "foreign": -120695,
+        "trust": -888000,
+        "dealer": -41278,
+        "total": -1049973
+      },
+      "history_days": 1
+    },
+    {
+      "code": "3715",
+      "name": "定穎投控",
+      "market": "TWSE",
+      "latest_date": "20260902",
+      "latest": {
+        "foreign": -3251932,
+        "trust": 0,
+        "dealer": -195648,
+        "total": -3447580
+      },
+      "last_7_days": {
+        "foreign": -3251932,
+        "trust": 0,
+        "dealer": -195648,
+        "total": -3447580
+      },
+      "last_30_days": {
+        "foreign": -3251932,
+        "trust": 0,
+        "dealer": -195648,
+        "total": -3447580
+      },
+      "history_days": 1
+    }
+  ]
 }
