@@ -110,13 +110,15 @@ def fetch_tpex_day(date_str: str):
 
     payload = http_get_json(
         TPEX_URL,
-        {"l": "zh-tw", "se": "AL", "t": "D", "d": roc_date, "o": "json"},
+        {"l": "zh-tw", "se": "EW", "t": "D", "d": roc_date, "o": "json"},
     )
     if not payload:
+        print(f"[除錯] TPEx {roc_date} 回傳空值")
         return None
 
-    rows = payload.get("aaData") or payload.get("data") or []
+    rows = payload.get("aaData") or payload.get("data") or (payload.get("tables", [{}])[0].get("data") if isinstance(payload, dict) else None)
     if not rows:
+        print(f"[除錯] TPEx {roc_date} 回傳結構無法解析，keys={list(payload.keys()) if isinstance(payload, dict) else type(payload)}")
         return None
 
     result = {}
