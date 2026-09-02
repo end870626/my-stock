@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>我的持股｜三大法人買賣超儀表板</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --border: #2a2e38;
+    --text: #e8e9ec;
+    --muted: #9aa0ab;
+    --buy: #e05656;
+    --sell: #35b06b;
+    --accent: #5b8def;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 16px;
+  }
+  h1 { font-size: 1.3rem; margin-bottom: 4px; }
+  .updated { color: var(--muted); font-size: 0.85rem; margin-bottom: 20px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 14px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .card h2 { margin: 0 0 2px 0; font-size: 1.05rem; }
+  .card .code { color: var(--muted); font-size: 0.8rem; margin-bottom: 12px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  td, th { padding: 4px 2px; text-align: right; }
+  th:first-child, td:first-child { text-align: left; color: var(--muted); font-weight: normal; }
+  .pos { color: var(--buy); }
+  .neg { color: var(--sell); }
+  .zero { color: var(--muted); }
+  canvas { margin-top: 12px; max-height: 140px; }
+  .empty { color: var(--muted); padding: 40px; text-align: center; }
+</style>
+</head>
+<body>
+  <h1>📊 我的持股｜三大法人買賣超儀表板</h1>
+  <div class="updated" id="updated">載入中...</div>
+  <div class="grid" id="grid"></div>
+
+  <script>
+    const fmt = (n) => {
+      const zhang = Math.round(n / 1000);
+      if (zhang === 0) return '<span class="zero">0</span>';
+      const cls = zhang > 0 ? 'pos' : 'neg';
+      const sign = zhang > 0 ? '+' : '';
+      return `<span class="${cls}">${sign}${zhang.toLocaleString()}</span>`;
+    };
+
+    async function loadData() {
+      const grid = document.getElementById('grid');
+      try {
+        const [summaryRes, historyRes] = await Promise.all([
+          fetch('data/summary.json?_=' + Date.now()),
+          fetch('data/history.json?_=' + Date.now())
+        ]);
+        const summary = await summaryRes.json();
+        const history = await historyRes.json();
+
+        document.getElementById('updated').textContent =
+          '最新資料日期：' + (summary.updated_at || '尚無資料') + '（單位：張，正值為買超、負值為賣超）';
+
+        if (!summary.stocks || summary.stocks.length === 0) {
+          grid.innerHTML = '<div class="empty">尚無資料，等待第一次自動更新，或先手動執行 fetch_institutional.py</div>';
+          return;
+        }
+
+        grid.innerHTML = '';
+        summary.stocks.forEach((s) => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
+            <h2>${s.name}</h2>
+            <div class="code">${s.code}　${s.market}</div>
+            <table>
+              <tr><th></th><th>最新日</th><th>近7日</th><th>近30日</th></tr>
+              <tr><td>外資</td><td>${s.latest ? fmt(s.latest.foreign) : '-'}</td><td>${fmt(s.last_7_days.foreign)}</td><td>${fmt(s.last_30_days.foreign)}</td></tr>
+              <tr><td>投信</td><td>${s.latest ? fmt(s.latest.trust) : '-'}</td><td>${fmt(s.last_7_days.trust)}</td><td>${fmt(s.last_30_days.trust)}</td></tr>
+              <tr><td>自營商</td><td>${s.latest ? fmt(s.latest.dealer) : '-'}</td><td>${fmt(s.last_7_days.dealer)}</td><td>${fmt(s.last_30_days.dealer)}</td></tr>
+              <tr><td><b>合計</b></td><td><b>${s.latest ? fmt(s.latest.total) : '-'}</b></td><td><b>${fmt(s.last_7_days.total)}</b></td><td><b>${fmt(s.last_30_days.total)}</b></td></tr>
+            </table>
+            <canvas id="chart-${s.code}"></canvas>
+          `;
+          grid.appendChild(card);
+
+          const stockHistory = (history[s.code] && history[s.code].daily) || [];
+          const last30 = stockHistory.slice(-30);
+          const ctx = card.querySelector('canvas').getContext('2d');
+          new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: last30.map(d => d.date.slice(4, 6) + '/' + d.date.slice(6, 8)),
+              datasets: [{
+                label: '三大法人合計(張)',
+                data: last30.map(d => Math.round(d.total / 1000)),
+                backgroundColor: last30.map(d => d.total >= 0 ? '#e05656' : '#35b06b')
+              }]
+            },
+            options: {
+              plugins: { legend: { display: false } },
+              scales: {
+                x: { ticks: { color: '#9aa0ab', maxTicksLimit: 8 }, grid: { display: false } },
+                y: { ticks: { color: '#9aa0ab' }, grid: { color: '#2a2e38' } }
+              }
+            }
+          });
+        });
+      } catch (err) {
+        grid.innerHTML = '<div class="empty">資料載入失敗：' + err.message + '</div>';
+      }
+    }
+
+    loadData();
+  </script>
+</body>
+</html>
