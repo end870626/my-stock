@@ -8,21 +8,21 @@
       "latest_date": "20260903",
       "latest": {
         "foreign": 375859,
-        "trust": 104000,
+        "trust": 104084,
         "dealer": -58851,
-        "total": 421008
+        "total": 421092
       },
       "last_7_days": {
         "foreign": 672047,
-        "trust": -138676,
+        "trust": -138592,
         "dealer": -111447,
-        "total": 421924
+        "total": 422008
       },
       "last_30_days": {
         "foreign": 672047,
-        "trust": -138676,
+        "trust": -138592,
         "dealer": -111447,
-        "total": 421924
+        "total": 422008
       },
       "history_days": 2
     },
