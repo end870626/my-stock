@@ -33,21 +33,21 @@
       "latest_date": "20260908",
       "latest": {
         "foreign": 441059,
-        "trust": 567933,
+        "trust": 564933,
         "dealer": -137553,
-        "total": 871439
+        "total": 868439
       },
       "last_7_days": {
         "foreign": 761108,
-        "trust": 469630,
+        "trust": 466630,
         "dealer": -51073,
-        "total": 1179665
+        "total": 1176665
       },
       "last_30_days": {
         "foreign": 761108,
-        "trust": 469630,
+        "trust": 466630,
         "dealer": -51073,
-        "total": 1179665
+        "total": 1176665
       },
       "history_days": 5
     },
@@ -58,21 +58,21 @@
       "latest_date": "20260908",
       "latest": {
         "foreign": 2144829,
-        "trust": -659307,
+        "trust": -673307,
         "dealer": -371161,
-        "total": 1114361
+        "total": 1100361
       },
       "last_7_days": {
         "foreign": 18065281,
-        "trust": -5281161,
+        "trust": -5295161,
         "dealer": 115740,
-        "total": 12899860
+        "total": 12885860
       },
       "last_30_days": {
         "foreign": 18065281,
-        "trust": -5281161,
+        "trust": -5295161,
         "dealer": 115740,
-        "total": 12899860
+        "total": 12885860
       },
       "history_days": 5
     },
