@@ -33,21 +33,21 @@
       "latest_date": "20260918",
       "latest": {
         "foreign": -166234,
-        "trust": 93874,
+        "trust": 88874,
         "dealer": 82438,
-        "total": 10078
+        "total": 5078
       },
       "last_7_days": {
         "foreign": -718761,
-        "trust": 149643,
+        "trust": 144643,
         "dealer": 144917,
-        "total": -424201
+        "total": -429201
       },
       "last_30_days": {
         "foreign": 33296,
-        "trust": 1331389,
+        "trust": 1326389,
         "dealer": 108912,
-        "total": 1473597
+        "total": 1468597
       },
       "history_days": 13
     },
