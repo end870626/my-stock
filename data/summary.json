@@ -1,155 +1,155 @@
 {
-  "updated_at": "20261124",
+  "updated_at": "20261125",
   "stocks": [
     {
       "code": "3017",
       "name": "奇鋐",
       "market": "TWSE",
-      "latest_date": "20261124",
+      "latest_date": "20261125",
       "latest": {
-        "foreign": -131139,
-        "trust": -2849,
-        "dealer": 17184,
-        "total": -116804
+        "foreign": -1286724,
+        "trust": 1511034,
+        "dealer": -183838,
+        "total": 40472
       },
       "last_7_days": {
-        "foreign": -1226695,
-        "trust": 402797,
-        "dealer": 612053,
-        "total": -211845
+        "foreign": -1666101,
+        "trust": 1873071,
+        "dealer": 171101,
+        "total": 378071
       },
       "last_30_days": {
-        "foreign": -11257930,
-        "trust": 8589960,
-        "dealer": 41418,
-        "total": -2626552
+        "foreign": -12855778,
+        "trust": 10305394,
+        "dealer": -134468,
+        "total": -2684852
       },
-      "history_days": 55
+      "history_days": 56
     },
     {
       "code": "2360",
       "name": "致茂",
       "market": "TWSE",
-      "latest_date": "20261124",
+      "latest_date": "20261125",
       "latest": {
-        "foreign": -33745,
-        "trust": -17318,
-        "dealer": 8521,
-        "total": -42542
+        "foreign": 167204,
+        "trust": 60458,
+        "dealer": -97544,
+        "total": 130118
       },
       "last_7_days": {
-        "foreign": 3667999,
-        "trust": -1935160,
-        "dealer": 316457,
-        "total": 2049296
+        "foreign": 3609009,
+        "trust": -2006584,
+        "dealer": 269761,
+        "total": 1872186
       },
       "last_30_days": {
-        "foreign": -47446,
-        "trust": -2923160,
-        "dealer": 1402298,
-        "total": -1568308
+        "foreign": 312730,
+        "trust": -2913733,
+        "dealer": 1274306,
+        "total": -1326697
       },
-      "history_days": 55
+      "history_days": 56
     },
     {
       "code": "3711",
       "name": "日月光投控",
       "market": "TWSE",
-      "latest_date": "20261124",
+      "latest_date": "20261125",
       "latest": {
-        "foreign": -5076552,
-        "trust": -26766,
-        "dealer": 54688,
-        "total": -5048630
+        "foreign": -6232485,
+        "trust": 6070601,
+        "dealer": -446893,
+        "total": -608777
       },
       "last_7_days": {
-        "foreign": -29494763,
-        "trust": 3101457,
-        "dealer": 3945890,
-        "total": -22447416
+        "foreign": -31355277,
+        "trust": 10253126,
+        "dealer": 3191401,
+        "total": -17910750
       },
       "last_30_days": {
-        "foreign": -145636694,
-        "trust": 53990707,
-        "dealer": 7680387,
-        "total": -83965600
+        "foreign": -154027968,
+        "trust": 59247497,
+        "dealer": 6983705,
+        "total": -87796766
       },
-      "history_days": 55
+      "history_days": 56
     },
     {
       "code": "2049",
       "name": "上銀",
       "market": "TWSE",
-      "latest_date": "20261124",
+      "latest_date": "20261125",
       "latest": {
-        "foreign": -3074336,
-        "trust": 0,
-        "dealer": 40403,
-        "total": -3033933
+        "foreign": 643850,
+        "trust": -85,
+        "dealer": -10558,
+        "total": 633207
       },
       "last_7_days": {
-        "foreign": -6714157,
-        "trust": -248000,
-        "dealer": -11751,
-        "total": -6973908
+        "foreign": -4337037,
+        "trust": -248085,
+        "dealer": 81147,
+        "total": -4503975
       },
       "last_30_days": {
-        "foreign": -5440559,
-        "trust": -1855671,
-        "dealer": -412781,
-        "total": -7709011
+        "foreign": -5314805,
+        "trust": -1855756,
+        "dealer": -439784,
+        "total": -7610345
       },
-      "history_days": 55
+      "history_days": 56
     },
     {
       "code": "3715",
       "name": "定穎投控",
       "market": "TWSE",
-      "latest_date": "20261124",
+      "latest_date": "20261125",
       "latest": {
-        "foreign": 138240,
+        "foreign": 494550,
         "trust": 0,
-        "dealer": 102770,
-        "total": 241010
+        "dealer": -98189,
+        "total": 396361
       },
       "last_7_days": {
-        "foreign": -4835276,
+        "foreign": -1643393,
         "trust": 4000,
-        "dealer": 228638,
-        "total": -4602638
+        "dealer": 139047,
+        "total": -1500346
       },
       "last_30_days": {
-        "foreign": 8365687,
+        "foreign": 10009962,
         "trust": 3959,
-        "dealer": -80916,
-        "total": 8288730
+        "dealer": -143907,
+        "total": 9870014
       },
-      "history_days": 55
+      "history_days": 56
     },
     {
       "code": "6182",
       "name": "合晶",
       "market": "TPEX",
-      "latest_date": "20261124",
+      "latest_date": "20261125",
       "latest": {
-        "foreign": 321000,
-        "trust": 321000,
-        "dealer": -419000,
-        "total": -48023
+        "foreign": -279266,
+        "trust": -279266,
+        "dealer": -484000,
+        "total": 94050
       },
       "last_7_days": {
-        "foreign": 10846504,
-        "trust": 10846504,
-        "dealer": -1293000,
-        "total": 9650454
+        "foreign": 7202270,
+        "trust": 7202270,
+        "dealer": -1777000,
+        "total": 6619873
       },
       "last_30_days": {
-        "foreign": 15297563,
-        "trust": 15297563,
-        "dealer": -601000,
-        "total": 8036990
+        "foreign": 16432398,
+        "trust": 16432398,
+        "dealer": -1085000,
+        "total": 10373896
       },
-      "history_days": 55
+      "history_days": 56
     }
   ]
 }
